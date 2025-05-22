@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>
+ 
+
+
+<!-- we play with username and password bcz plm basically y dono cheeza store krta hai and we use username to uniquelly identification -->
+
+<div class="row">
+    <div class="col-md-5 mx-auto">
+        <%- include('../partials/flash')  %> 
+        <div class="card p-3 shadow-sm m-2">
+            <h1 class="display-6">Login</h1>
+                <!-- method aur action y isliya hua kyuki mera ko yhi route hit hone k baad save krna hai  -->
+            <form action="/login" method="post">
+                <div class="mb-3">
+                        <!-- yha pa naam hamehsa username hi hoga kyuki plm kr rha hai mera liya isliya -->
+                    <label class="form-label" for="username">Username</label>
+                    <input class="form-control" type="text" name="username" id="username" placeholder="Username">
+                </div>
+                <div class="mb-3">
+                        <!-- yha pa naam hamehsa password hi hoga kyuki plm kr rha hai mera liya isliya -->
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-success btn-block btn-small">Login</button>
+                <p class="fw-light mt-2">Don't have an account yet ? <a href="/register">SignUp</a> </p> 
+            </form>
+        </div>
+    </div>
+</div>
